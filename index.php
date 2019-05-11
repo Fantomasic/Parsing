@@ -12,6 +12,8 @@ foreach ($title as $game ) {
 
 $echo = str_replace ("Добавить в корзину","",$game);
 $echo = str_replace("Платеж в месяц","",$echo);
+$echo = str_replace((",",".",$echo);
+$echo = str_replace('€',"",$echo);
 echo $echo;
 }
 
