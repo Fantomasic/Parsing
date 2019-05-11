@@ -23,7 +23,7 @@ foreach ($title as $game) {
           }
       }
       $echo = str_replace($money,"",$echo);
-      $app->add(['Label',$echo,'big green']);
+      $app->add(['Label',$echo,'big blue']);
       $app->add(['Label',$money.' €','small red']);
       $app->add(['ui'=>"hidden divider"]);
     }
