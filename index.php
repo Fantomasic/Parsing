@@ -23,5 +23,4 @@ $title = explode('Компьютерная игра',$title);
 
 
 
-
 phpQuery::unloadDocuments($html);
