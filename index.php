@@ -7,6 +7,7 @@ $html=file_get_contents('https://www.elkor.lv/rus/elektronika-1/speles/datorspel
 phpQuery::newDocument($html);
 $title = pq('#products-grid-table')->text();
 var_dump($title);
+$title = explode('Компьютерная игра',$title);
 
 
 
