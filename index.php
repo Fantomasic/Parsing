@@ -29,8 +29,9 @@ foreach ($title as $game) {
       $app->add(['ui'=>"hidden divider"]);
       $g=new Games ($db);
       $g['name']=$echo;
+      echo $echo;
       $g['price']=$money;
-      $g->save();
+      //$g->save();
 
     }
 }
