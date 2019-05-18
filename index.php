@@ -1,6 +1,7 @@
 <?php
 session_start();
 require 'vendor/autoload.php';
+require 'сonnection.php';
 $app = new \atk4\ui\App('Parsing');
 $app->initLayout('Centered');
 $html=file_get_contents('https://www.elkor.lv/rus/elektronika-1/speles/datorspeles/?game_age_restriction=5305');
@@ -26,6 +27,11 @@ foreach ($title as $game) {
       $app->add(['Label',$echo,'big blue']);
       $app->add(['Label',$money.' €','small red']);
       $app->add(['ui'=>"hidden divider"]);
+      $g=new Games ($db);
+      $g['name']=$echo;
+      $g['price']=$money;
+      $g->save();
+
     }
 }
 phpQuery::unloadDocuments($html);
